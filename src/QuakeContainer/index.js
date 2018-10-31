@@ -6,6 +6,7 @@ class QuakeContainer extends Component {
     const quakeList = this.props.quakeData.map((quakeData, i) => {
       return(
         <li key={i}>
+          <h4>Earthquakes from the past week:</h4>
           <p> Title: {quakeData.properties.title} </p>
           <p> Coordinates: {quakeData.geometry.coordinates} </p>
           <p> Time: {quakeData.properties.time} </p>
@@ -16,7 +17,7 @@ class QuakeContainer extends Component {
     return (
       <div>
         <ul>
-          <h3>Earthquakes from the past week:</h3>
+          <h1>Geo Quakes</h1>
           {quakeList}
         </ul>
       </div>
